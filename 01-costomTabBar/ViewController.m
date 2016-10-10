@@ -7,8 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "oneViewController.h"
+#import "twoViewController.h"
+#import "threeViewController.h"
 
 @interface ViewController ()
+
+/** btns */
+@property (nonatomic, strong) NSArray *array;
+
+/** showing */
+@property (nonatomic, strong) UIViewController *show;
 
 @end
 
@@ -16,13 +25,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _array = @[
+               [[oneViewController alloc] init],
+               [[twoViewController alloc] init],
+               [[threeViewController alloc] init]
+               ];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)allBtnClick:(UIButton *)sender {
+    
+    NSInteger index = [sender.superview.subviews indexOfObject:sender];
+    
+    [_show.view removeFromSuperview];
+    _show = _array[index];
+    _show.view.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64);
+    [self.view addSubview:_show.view];
+    
 }
 
 

@@ -14,6 +14,11 @@
 		594FB1BF1DAA26D4005E8E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594FB1BE1DAA26D4005E8E49 /* Assets.xcassets */; };
 		594FB1C21DAA26D4005E8E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594FB1C01DAA26D4005E8E49 /* LaunchScreen.storyboard */; };
 		594FB1CD1DAA26D4005E8E49 /* _1_costomTabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FB1CC1DAA26D4005E8E49 /* _1_costomTabBarTests.m */; };
+		594FB1D91DABCDF3005E8E49 /* oneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FB1D81DABCDF3005E8E49 /* oneViewController.m */; };
+		594FB1DD1DABCE07005E8E49 /* twoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FB1DB1DABCE07005E8E49 /* twoViewController.m */; };
+		594FB1DE1DABCE07005E8E49 /* twoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594FB1DC1DABCE07005E8E49 /* twoViewController.xib */; };
+		594FB1E21DABCE18005E8E49 /* threeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594FB1E01DABCE18005E8E49 /* threeViewController.m */; };
+		594FB1E31DABCE18005E8E49 /* threeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594FB1E11DABCE18005E8E49 /* threeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,14 @@
 		594FB1C81DAA26D4005E8E49 /* 01-costomTabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "01-costomTabBarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		594FB1CC1DAA26D4005E8E49 /* _1_costomTabBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _1_costomTabBarTests.m; sourceTree = "<group>"; };
 		594FB1CE1DAA26D4005E8E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594FB1D71DABCDF3005E8E49 /* oneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneViewController.h; sourceTree = "<group>"; };
+		594FB1D81DABCDF3005E8E49 /* oneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oneViewController.m; sourceTree = "<group>"; };
+		594FB1DA1DABCE07005E8E49 /* twoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twoViewController.h; sourceTree = "<group>"; };
+		594FB1DB1DABCE07005E8E49 /* twoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = twoViewController.m; sourceTree = "<group>"; };
+		594FB1DC1DABCE07005E8E49 /* twoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = twoViewController.xib; sourceTree = "<group>"; };
+		594FB1DF1DABCE18005E8E49 /* threeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threeViewController.h; sourceTree = "<group>"; };
+		594FB1E01DABCE18005E8E49 /* threeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = threeViewController.m; sourceTree = "<group>"; };
+		594FB1E11DABCE18005E8E49 /* threeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = threeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +94,14 @@
 		594FB1B11DAA26D4005E8E49 /* 01-costomTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				594FB1D71DABCDF3005E8E49 /* oneViewController.h */,
+				594FB1D81DABCDF3005E8E49 /* oneViewController.m */,
+				594FB1DA1DABCE07005E8E49 /* twoViewController.h */,
+				594FB1DB1DABCE07005E8E49 /* twoViewController.m */,
+				594FB1DC1DABCE07005E8E49 /* twoViewController.xib */,
+				594FB1DF1DABCE18005E8E49 /* threeViewController.h */,
+				594FB1E01DABCE18005E8E49 /* threeViewController.m */,
+				594FB1E11DABCE18005E8E49 /* threeViewController.xib */,
 				594FB1B51DAA26D4005E8E49 /* AppDelegate.h */,
 				594FB1B61DAA26D4005E8E49 /* AppDelegate.m */,
 				594FB1B81DAA26D4005E8E49 /* ViewController.h */,
@@ -193,9 +214,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				594FB1E31DABCE18005E8E49 /* threeViewController.xib in Resources */,
 				594FB1C21DAA26D4005E8E49 /* LaunchScreen.storyboard in Resources */,
 				594FB1BF1DAA26D4005E8E49 /* Assets.xcassets in Resources */,
 				594FB1BD1DAA26D4005E8E49 /* Main.storyboard in Resources */,
+				594FB1DE1DABCE07005E8E49 /* twoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +239,9 @@
 				594FB1BA1DAA26D4005E8E49 /* ViewController.m in Sources */,
 				594FB1B71DAA26D4005E8E49 /* AppDelegate.m in Sources */,
 				594FB1B41DAA26D4005E8E49 /* main.m in Sources */,
+				594FB1E21DABCE18005E8E49 /* threeViewController.m in Sources */,
+				594FB1D91DABCDF3005E8E49 /* oneViewController.m in Sources */,
+				594FB1DD1DABCE07005E8E49 /* twoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +436,7 @@
 				594FB1D31DAA26D4005E8E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		594FB1D41DAA26D4005E8E49 /* Build configuration list for PBXNativeTarget "01-costomTabBarTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +445,7 @@
 				594FB1D61DAA26D4005E8E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
