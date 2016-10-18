@@ -13,11 +13,11 @@
 
 @interface ViewController ()
 
-/** btns */
-@property (nonatomic, strong) NSArray *array;
-
 /** showing */
 @property (nonatomic, strong) UIViewController *show;
+
+/** 用来存放动画的View */
+@property (nonatomic, strong) UIView *contentView;
 
 @end
 
@@ -36,27 +36,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    _array = @[
-//               [[oneViewController alloc] init],
-//               [[twoViewController alloc] init],
-//               [[threeViewController alloc] init]
-//               ];
+    
+    // 添加内容view
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
+    [self.view addSubview:contentView];
+    self.contentView = contentView;
     
     [self addChildViewController:[[oneViewController alloc] init]];
     [self addChildViewController:[[twoViewController alloc] init]];
     [self addChildViewController:[[threeViewController alloc] init]];
-
+    
 }
 
 - (IBAction)allBtnClick:(UIButton *)sender {
     
     // 获得控制器的位置
     NSInteger index = [sender.superview.subviews indexOfObject:sender];
+    // 获得旧控制器的位置
+    NSInteger oldIndex = [self.childViewControllers indexOfObject:_show];
     
     [_show.view removeFromSuperview];
     _show = self.childViewControllers[index];
-    _show.view.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64);
-    [self.view addSubview:_show.view];
+    _show.view.frame = self.contentView.bounds;
+    [self.contentView addSubview:_show.view];
+    
+    // 创建动画
+    CATransition *ani = [[CATransition alloc] init];
+    //    ani.type = @"cube";
+    // 动画类型
+    ani.type = kCATransitionMoveIn;
+    // 动画时间
+    ani.duration = 1.0;
+    // 动画进入方向
+    ani.subtype = oldIndex > index? kCATransitionFromLeft:kCATransitionFromRight;
+    [self.contentView.layer addAnimation:ani forKey:nil];
     
 }
 
