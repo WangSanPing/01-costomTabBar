@@ -27,4 +27,7 @@
     NSLog(@"Class ----->%@",NSStringFromClass([self class]));
 }
 
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    NSLog(@"%@ willRotateToInterfaceOrientation",self.class);
+}
 @end

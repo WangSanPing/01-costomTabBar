@@ -40,4 +40,8 @@ static NSString *cellID = @"cell";
     return cell;
 }
 
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    NSLog(@"%@ willRotateToInterfaceOrientation",self.class);
+}
+
 @end
